@@ -1,13 +1,14 @@
 # Define required macros here
+#cc `pkg-config --cflags gtk+-3.0` mylogout.c -o mylogout `pkg-config --libs gtk+-3.0`
 SHELL = /bin/sh
 
 OBJS =  mylogout.o
-CFLAG = -Wall -g
-CC = gcc
-INCLUDE =
-LIBS = -lm
+CFLAG = `pkg-config --cflags gtk+-3.0`
+CC = cc
+INCLUDE = mylogout.c
+LIBS =`pkg-config --libs gtk+-3.0`
 
-hello:${OBJ}
+mylogout:${OBJ}
    ${CC} ${CFLAGS} ${INCLUDES} -o $@ ${OBJS} ${LIBS}
 
 clean:
