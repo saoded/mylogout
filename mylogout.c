@@ -89,8 +89,8 @@ activate (GtkApplication *app,
   create_button(btns[SHUTDOWN], "Shutdown", on_shutdown_clicked);
   create_button(btns[CANCEL], "Cancel", on_cancel_clicked);
 
-/*// SIGNAL HANDLING
-  signals[SLEEP_SIGNAL] = g_signal_new_class_handler("sleep",
+// TODO: SIGNAL HANDLING
+/*  signals[SLEEP_SIGNAL] = g_signal_new_class_handler("sleep",
     G_OBJECT_CLASS_TYPE(widget_class), (GSignalFlags) (G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION),
     G_CALLBACK(on_sleep_clicked), NULL, NULL, NULL, G_TYPE_NONE, 2,
     G_TYPE_INT, G_TYPE_INT
